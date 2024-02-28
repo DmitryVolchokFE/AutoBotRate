@@ -1,9 +1,8 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-
 (async () => {
-  const browser = await puppeteer.launch({ headless: false, protocolTimeout: 0 });
+  const browser = await puppeteer.launch({ executablePath: '/usr/bin/chromium-browser', headless: false, protocolTimeout: 0 });
   const page = await browser.newPage();
   await page.goto('https://plgeubet.com/ru');
   await wait(40000);
